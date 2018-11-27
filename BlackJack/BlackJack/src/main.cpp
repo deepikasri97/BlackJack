@@ -2,6 +2,7 @@
 //
 
 #include "main.h"
+#include "Game.h"
 #include <iostream>
 
 int main()
