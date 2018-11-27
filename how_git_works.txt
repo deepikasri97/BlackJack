@@ -1,0 +1,15 @@
+From the terminal:
+
+-To check the status of your local code to the server code
+	git status
+
+-To pull most recent version into current branch:
+	git pull
+
+-To commit your new code to the server
+	git add .
+	git commit -m "your commit message"
+	git push
+
+-To discard all local changes and revert back to the latest version on the server
+	git reset --hard
