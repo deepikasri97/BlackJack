@@ -4,7 +4,7 @@
 enum CardSuit{diamonds, clubs, hearts, spades};
 
 //enum for the different card values, start counting at value 1, so a static cast can be used to acquire numeric card values
-enum CardValue{ace = 1, two, three, four, five, six, seven, eight, nine, jack, queen, king};
+enum CardValue{ace = 1, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king};
 
 class Card{
 	public:
