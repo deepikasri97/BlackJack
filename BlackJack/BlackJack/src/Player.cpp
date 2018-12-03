@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <string>
 #include <stdlib>
-
+#include "Hand.h"
 
 //constructor 
 Player::Player(const string& name):
