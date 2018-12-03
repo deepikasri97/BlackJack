@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Card.h"
 
 class Hand
 {
