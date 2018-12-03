@@ -1,5 +1,6 @@
 #include "Hand.h"
 #include "Card.h"
+#include <vector>
 
 
 //constructor
