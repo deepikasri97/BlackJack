@@ -51,10 +51,6 @@ bool Player:: IsHitting() const
    return (GetTotal()>21);
  }
             
- //this function calls when players busts
- void Player::Bust() const
-  {
-    std::cout << Name << "Busts\n";
-  }
+ 
             
           
