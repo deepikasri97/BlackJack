@@ -34,12 +34,12 @@ int main()
 	//create a card stack from the CardStack class
 	CardStack cs = CardStack(6);
 
-	std::shared_ptr<Card> kaart1 = cs.getCard();	//a ptr is being moved from getCard() to here
-	std::shared_ptr<Card> kaart2 = cs.getCard();
+	CardPtr kaart1 = cs.getCard();	//a ptr is being moved from getCard() to here
+	CardPtr kaart2 = cs.getCard();
 
 	cs.shuffle(); //shuffle the card stack
 
-	std::shared_ptr<Card> kaart3 = cs.getCard();	//deck is now shuffled
+	CardPtr kaart3 = cs.getCard();	//deck is now shuffled
 
 	std::cout << "kaart1, suit: " << kaart1->getSuit() << ", value: " << kaart1->getValue() << std::endl;
 	std::cout << "kaart2, suit: " << kaart2->getSuit() << ", value: " << kaart2->getValue() << std::endl;

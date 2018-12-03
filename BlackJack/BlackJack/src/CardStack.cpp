@@ -22,14 +22,14 @@ void CardStack::shuffle(){
 }
 
 //this function removes a card from the stack and returns that card
-std::shared_ptr<Card> CardStack::getCard(){
-	std::shared_ptr<Card> temp = std::move(_stack.front());	//move the ptr here, so the top entry of the stack can be deleted
+CardPtr CardStack::getCard(){
+	CardPtr temp = std::move(_stack.front());	//move the ptr here, so the top entry of the stack can be deleted
 	_stack.erase(_stack.begin());							//delete the top entry of the stack (which is now a nullptr)
 	return std::move(temp);									//move the shared ptr to the caller
 }
 
 //this function adds the card passed by the argument to the back of the stac,
-void CardStack::addCard(std::shared_ptr<Card> newCard){
+void CardStack::addCard(CardPtr newCard){
 	_stack.push_back(std::move(newCard));		//move the card back into the vector
 }
 
@@ -38,11 +38,11 @@ void CardStack::addCard(std::shared_ptr<Card> newCard){
  */
 
 //this function generates one card deck, which can be accessed by shared pointers
-std::vector<std::shared_ptr<Card>> CardStack::generateDeck() {
-	std::vector<std::shared_ptr<Card>> deck;
+std::vector<CardPtr> CardStack::generateDeck() {
+	std::vector<CardPtr> deck;
 	for (int suit = 0; suit < 4; suit++) {		//iterate over the different suit types
 		for (int val = 1; val < 14; val++) {	//iterate over the different values
-			std::shared_ptr<Card> p = std::make_shared<Card>(static_cast<CardSuit>(suit), static_cast<CardValue>(val));
+			CardPtr p = std::make_shared<Card>(static_cast<CardSuit>(suit), static_cast<CardValue>(val));
 			deck.push_back(p);
 		}
 	}
@@ -52,7 +52,7 @@ std::vector<std::shared_ptr<Card>> CardStack::generateDeck() {
 //this function generates a card stack, containing an amount of decks as specified by the argument 
 void CardStack::generateStack(int amountOfDecks){
 	//generate one deck of cards
-	std::vector<std::shared_ptr<Card>> deck = generateDeck();
+	std::vector<CardPtr> deck = generateDeck();
 	
 	int generated = 0;
 	while (generated < amountOfDecks) {	//generate an amount of decks as specified by the argument
