@@ -1,5 +1,6 @@
 #include "Player.h"
 #include <string>
+#include <stdlib>
 
 
 //constructor 
