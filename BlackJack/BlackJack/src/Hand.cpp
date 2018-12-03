@@ -47,7 +47,7 @@ void Hand::Clear()
     }
     
     //if a first card has a value of 0, then card is face down; returns 0
-    if (m_Cards[0] -> GetValue() == 0)
+    if (m_Cards[0] -> getValue() == 0)
     {
       return 0;
     }
@@ -57,14 +57,14 @@ void Hand::Clear()
     vector<Card*>::const_iterator iter;
     for (iter = m_Cards.begin(); iter!= m_Cards.end(); ++iter)
     {
-      total += (*iter) -> GetValue();
+      total += (*iter) -> getValue();
     }
     
     //determine if hand contains ace
     bool containsAce = false;
     for (iter = m_Cards.begin(); iter != m_Cards.end(); ++iter)
     {
-      if ((*iter) -> GetValue() == Card::ace)
+      if ((*iter) -> getValue() == Card::ace)
       {
         containsAce = true;
       }
