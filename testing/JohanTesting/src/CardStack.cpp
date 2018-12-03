@@ -28,7 +28,7 @@ CardPtr CardStack::getCard(){
 	return std::move(temp);									//move the shared ptr to the caller
 }
 
-//this function adds the card passed by the argument to the back of the stac,
+//this function adds the card passed by the argument to the back of the stack
 void CardStack::addCard(CardPtr newCard){
 	_stack.push_back(std::move(newCard));		//move the card back into the vector
 }

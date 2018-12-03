@@ -21,5 +21,5 @@ class Card{
 		const CardValue _value;
 };
 
-//convenient typedef for the a shared ptr to card
+//convenient typedef for a shared ptr to card
 typedef std::shared_ptr<Card> CardPtr;
