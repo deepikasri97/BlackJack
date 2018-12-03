@@ -1,6 +1,10 @@
 #include "Hand.h"
 #include "Card.h"
+#include <string>
+#include <iostream>
 #include <vector>
+#include <algorithm>
+#include <ctime>
 
 
 //constructor
