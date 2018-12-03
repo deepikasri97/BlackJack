@@ -2,23 +2,28 @@
 #include "Card.h"
 
 
-
+//constructor
 Hand::Hand()
 {
   m_Cards.reserve(5);
 }
 
-
+//destructor
 Hand::~Hand()
 {
   Clear();
 }
+
+/*
+* public functions
+*/
 
 void Hand::Add(Card* pCard)
 {
   m_Cards.push_back(pCard);
 }
 
+//this function clears the hand of all cards
 void Hand::Clear()
 {
   //iterate through vector, freeing all memory 
@@ -32,6 +37,7 @@ void Hand::Clear()
   //clear vector of pointers
   m_Cards.Clear();
   
+  //this functions gets the hand total value
   int Hand::GetTotal() const
   {
     // if no cards are in hand, return 0
@@ -72,6 +78,8 @@ void Hand::Clear()
     }
     
     return total;
+    
+  }
     
    
     
