@@ -15,10 +15,11 @@ class CardStack{
 		void addCard(std::shared_ptr<Card> newCard);
 
 	private:
-		void generateDeck();
+		std::vector<std::shared_ptr<Card>> generateDeck();
 		void generateStack(int amountOfDecks);
 
-		std::vector<std::shared_ptr<Card>> _deck;	//will contain 52 card pointers
-		std::vector<std::shared_ptr<Card>> _stack;	//will contain x copies of the shared_ptrs in _deck, and pass them around in the program
+		//on init, _stack will contain 52 unique copies of std::shared_ptr<Card>>
+		//and an x copies of each of those std::shared_ptr<Card>> when more decks are added
+		std::vector<std::shared_ptr<Card>> _stack;
 };
 
