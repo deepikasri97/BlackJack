@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
+#include <iostream>
 #include <vector>
+#include <algorithm>
+#include <ctime>
 #include "Card.h"
 
 class Hand
