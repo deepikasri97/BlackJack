@@ -14,7 +14,7 @@ public:
 	virtual bool IsHitting() const = 0;
 	
 	//returns whether player has busted - has total greater than 21
-	bool IsBusted() const;
+	void IsBusted() const;
 	 
 	//announces if the player wins
 	void Win() const;
