@@ -1,4 +1,9 @@
 #pragma once
+
+#include <string>
+#inlcude <memory>
+#include <vector>
+
 class Player
 {
 public:
